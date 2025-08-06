@@ -1,0 +1,37 @@
+{{ 'text2.css' | asset_url | stylesheet_tag }}
+<div class="container">
+  <div class="page-width">
+    {% for block in section.blocks %}
+      <div class="text-container">
+        <div class="title">{{ block.settings.title }}</div>
+
+        <div class="text-content2">{{ block.settings.text }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+ {
+  "name": "Text2",
+  "settings": [],
+  "blocks": [{
+    "type": "text",
+    "name": "text-content",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "title",
+        "label": "title"
+      },
+      {
+        "type":"richtext",
+        "id":"text",
+        "label": "text"
+      },
+
+    ]
+  }],
+  "presets": [{"name": "text2"}]
+}
+{% endschema %}

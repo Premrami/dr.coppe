@@ -1,0 +1,55 @@
+{{ 'accordian1.css' | asset_url | stylesheet_tag }}
+<div class="page-width">
+  <div class="accordian">
+    <div class="accordion-wrapper">
+      {% for block in section.blocks %}
+        {% if block.type == 'accordian' %}
+          <div class="accordion-item" {{ block.shopify_attributes }}>
+            <div class="acc-header" onclick="toggleAccordion(this)">
+              <h3>{{ block.settings.title }}</h3>
+              <svg width="33" height="19" viewBox="0 0 33 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4579 0.439348C16.0335 -0.146448 16.9665 -0.146448 17.5421 0.439348L32.5683 15.7323C33.1439 16.3181 33.1439 17.2677 32.5683 17.8535L31.8735 18.5607C31.298 19.1464 30.3648 19.1464 29.7892 18.5607L16.5 5.03552L3.21075 18.5607C2.63517 19.1464 1.70213 19.1464 1.12655 18.5607L0.431686 17.8535C-0.143894 17.2677 -0.143894 16.3181 0.431686 15.7323L15.4579 0.439348Z" fill="black"/>
+                <path d="M2.85449 18.21C2.47486 18.5963 1.86303 18.5963 1.4834 18.21L0.788086 17.5029C0.403903 17.1117 0.403974 16.4742 0.788086 16.083L15.8145 0.790039C16.1941 0.403669 16.8059 0.403669 17.1855 0.790039L32.2119 16.083C32.596 16.4742 32.5961 17.1117 32.2119 17.5029L31.5166 18.21C31.137 18.5963 30.5251 18.5963 30.1455 18.21L16.8564 4.68555L16.5 4.32227L16.1436 4.68555L2.85449 18.21Z" stroke="black" stroke-opacity="0.3"/>
+              </svg>
+            </div>
+            <div class="accordion-content">
+              <div>{{ block.settings.content }}</div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleAccordion(header) {
+    header.parentElement.classList.toggle('active');
+  }
+</script>
+
+{% schema %}
+{
+  "name": "accordian1",
+  "settings": [],
+  "blocks": [{
+    "type": "accordian",
+    "name": "accordian-item",
+    "settings": [
+      {
+        "type":"text",
+        "id":"title",
+        "label": "title",
+        "default":"hello"
+      },
+      {
+        "type":"richtext",
+        "id":"content",
+        "label": "content"
+      },
+
+    ]
+  }],
+  "presets": [{"name": "Accordian"}]
+}
+{% endschema %}

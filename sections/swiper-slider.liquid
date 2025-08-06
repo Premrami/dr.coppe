@@ -1,0 +1,50 @@
+<div class="slider">
+  {% for blocks in section.blocks %}
+    <div class="slider-card">
+      <div class="badge">bundle</div>
+      <h3>{{ blocks.settings.title }}</h3>
+      <p>{{ blocks.settings.price }}</p>
+      <div>{{ blocks.settings.features }}</div>
+      <button>Add to Cart</button>
+      <button>Build Your Own Bundle</button>
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Bundle Slider",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "slider",
+      "name": "Bundle Item",
+      "settings": [
+        {
+          "type":"text",
+          "id": "title",
+          "label": "slider title"
+        },
+        {
+          "type":"text",
+          "id": "price",
+          "label": "price"
+        },
+        {
+          "type":"richtext",
+          "id": "features",
+          "label": "features"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle Slider"
+    }
+  ]
+}
+{% endschema %}
+
+{{ 'swiper-slider.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-slider.js' | asset_url }}" defer="defer"></script>

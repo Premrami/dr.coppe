@@ -1,0 +1,75 @@
+/* Converted from accordian1.css */
+.accordion-item .acc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer
+}
+
+.accordian .accordion-item .acc-header h3 {
+    font-size: 64px;
+    line-height: 120%;
+    letter-spacing: 0px
+}
+
+.accordian .accordion-item .accordion-content {
+    display: none;
+    padding: 10px;
+    background: red;
+}
+
+.accordion-content ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px
+}
+
+.accordian .accordion-item .accordion-content a {
+    color: #000;
+    font-size: 18px;
+    line-height: 200%;
+    letter-spacing: 0px
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px
+}
+
+.accordion-item.active .accordion-content {
+    display: block
+}
+
+.accordion-item.active svg {
+    transform: rotate(180deg);
+    transition: transform .3s
+}
+
+.acc-header svg {
+    transition: transform .3s ease
+}
+
+.acc-header.active svg {
+    transform: rotate(180deg)
+}
+
+@media(max-width: 770px) {
+    .accordian .accordion-item .acc-header h3 {
+        font-size: 30px;
+        line-height: 120%;
+        letter-spacing: 0px
+    }
+
+    .accordian .accordion-item .accordion-content a {
+        color: #000;
+        font-size: 14px;
+        line-height: 200%;
+        letter-spacing: 0px
+    }
+
+    .acc-header svg {
+        width: 19px
+    }
+}
+
+/*# sourceMappingURL=accordian1.css.map */

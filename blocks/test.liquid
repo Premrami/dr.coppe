@@ -1,0 +1,64 @@
+<div class="custom-form-section">
+  <form id="custom-form" onsubmit="submitCustomForm(event)">
+    <label for="customInput">{{ section.settings.label }}</label>
+    <input type="text" id="customInput" name="customInput" placeholder="{{ section.settings.placeholder }}" required>
+    <button type="submit">{{ section.settings.button_text }}</button>
+    <p id="form-message" style="margin-top: 10px;"></p>
+  </form>
+</div>
+
+<script>
+  function submitCustomForm(event) {
+    event.preventDefault();
+    const input = document.getElementById('customInput').value;
+    document.getElementById('form-message').textContent = "Submitted: " + input;
+  }
+</script>
+
+<style>
+  .custom-form-section {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+  }
+
+  .custom-form-section input,
+  .custom-form-section button {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    max-width: 400px;
+    display: block;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Input with Button",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label",
+      "default": "Enter your text"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Placeholder Text",
+      "default": "Type something..."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Submit"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text Input with Submit Button"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".product-color-swatches").forEach(function(t){const e=t.closest("[data-product-id]").querySelector("img");t.querySelectorAll(".color-dot").forEach(function(c){c.addEventListener("click",function(){const o=this.dataset.variantImg;o&&e&&(e.src=o)})})})});

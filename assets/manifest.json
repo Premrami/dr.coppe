@@ -1,0 +1,1326 @@
+{
+  "theming/js/animations.js": {
+    "file": "animations.js",
+    "name": "animations",
+    "src": "theming/js/animations.js",
+    "isEntry": true
+  },
+  "theming/js/cart-drawer.js": {
+    "file": "cart-drawer.js",
+    "name": "cart-drawer",
+    "src": "theming/js/cart-drawer.js",
+    "isEntry": true
+  },
+  "theming/js/cart-notification.js": {
+    "file": "cart-notification.js",
+    "name": "cart-notification",
+    "src": "theming/js/cart-notification.js",
+    "isEntry": true
+  },
+  "theming/js/cart.js": {
+    "file": "cart.js",
+    "name": "cart",
+    "src": "theming/js/cart.js",
+    "isEntry": true
+  },
+  "theming/js/color-switch.js": {
+    "file": "color-switch.js",
+    "name": "color-switch",
+    "src": "theming/js/color-switch.js",
+    "isEntry": true
+  },
+  "theming/js/constants.js": {
+    "file": "constants.js",
+    "name": "constants",
+    "src": "theming/js/constants.js",
+    "isEntry": true
+  },
+  "theming/js/customer.js": {
+    "file": "customer.js",
+    "name": "customer",
+    "src": "theming/js/customer.js",
+    "isEntry": true
+  },
+  "theming/js/details-disclosure.js": {
+    "file": "details-disclosure.js",
+    "name": "details-disclosure",
+    "src": "theming/js/details-disclosure.js",
+    "isEntry": true
+  },
+  "theming/js/details-modal.js": {
+    "file": "details-modal.js",
+    "name": "details-modal",
+    "src": "theming/js/details-modal.js",
+    "isEntry": true
+  },
+  "theming/js/facets.js": {
+    "file": "facets.js",
+    "name": "facets",
+    "src": "theming/js/facets.js",
+    "isEntry": true
+  },
+  "theming/js/global.js": {
+    "file": "global.js",
+    "name": "global",
+    "src": "theming/js/global.js",
+    "isEntry": true
+  },
+  "theming/js/localization-form.js": {
+    "file": "localization-form.js",
+    "name": "localization-form",
+    "src": "theming/js/localization-form.js",
+    "isEntry": true
+  },
+  "theming/js/magnify.js": {
+    "file": "magnify.js",
+    "name": "magnify",
+    "src": "theming/js/magnify.js",
+    "isEntry": true
+  },
+  "theming/js/main-search.js": {
+    "file": "main-search.js",
+    "name": "main-search",
+    "src": "theming/js/main-search.js",
+    "isEntry": true
+  },
+  "theming/js/main.js": {
+    "file": "main.js",
+    "name": "main",
+    "src": "theming/js/main.js",
+    "isEntry": true
+  },
+  "theming/js/media-gallery.js": {
+    "file": "media-gallery.js",
+    "name": "media-gallery",
+    "src": "theming/js/media-gallery.js",
+    "isEntry": true
+  },
+  "theming/js/password-modal.js": {
+    "file": "password-modal.js",
+    "name": "password-modal",
+    "src": "theming/js/password-modal.js",
+    "isEntry": true
+  },
+  "theming/js/pickup-availability.js": {
+    "file": "pickup-availability.js",
+    "name": "pickup-availability",
+    "src": "theming/js/pickup-availability.js",
+    "isEntry": true
+  },
+  "theming/js/predictive-search.js": {
+    "file": "predictive-search.js",
+    "name": "predictive-search",
+    "src": "theming/js/predictive-search.js",
+    "isEntry": true
+  },
+  "theming/js/price-per-item.js": {
+    "file": "price-per-item.js",
+    "name": "price-per-item",
+    "src": "theming/js/price-per-item.js",
+    "isEntry": true
+  },
+  "theming/js/product-form.js": {
+    "file": "product-form.js",
+    "name": "product-form",
+    "src": "theming/js/product-form.js",
+    "isEntry": true
+  },
+  "theming/js/product-info.js": {
+    "file": "product-info.js",
+    "name": "product-info",
+    "src": "theming/js/product-info.js",
+    "isEntry": true
+  },
+  "theming/js/product-modal.js": {
+    "file": "product-modal.js",
+    "name": "product-modal",
+    "src": "theming/js/product-modal.js",
+    "isEntry": true
+  },
+  "theming/js/product-model.js": {
+    "file": "product-model.js",
+    "name": "product-model",
+    "src": "theming/js/product-model.js",
+    "isEntry": true
+  },
+  "theming/js/pubsub.js": {
+    "file": "pubsub.js",
+    "name": "pubsub",
+    "src": "theming/js/pubsub.js",
+    "isEntry": true
+  },
+  "theming/js/quantity-popover.js": {
+    "file": "quantity-popover.js",
+    "name": "quantity-popover",
+    "src": "theming/js/quantity-popover.js",
+    "isEntry": true
+  },
+  "theming/js/quick-add-bulk.js": {
+    "file": "quick-add-bulk.js",
+    "name": "quick-add-bulk",
+    "src": "theming/js/quick-add-bulk.js",
+    "isEntry": true
+  },
+  "theming/js/quick-add.js": {
+    "file": "quick-add.js",
+    "name": "quick-add",
+    "src": "theming/js/quick-add.js",
+    "isEntry": true
+  },
+  "theming/js/quick-order-list.js": {
+    "file": "quick-order-list.js",
+    "name": "quick-order-list",
+    "src": "theming/js/quick-order-list.js",
+    "isEntry": true
+  },
+  "theming/js/recipient-form.js": {
+    "file": "recipient-form.js",
+    "name": "recipient-form",
+    "src": "theming/js/recipient-form.js",
+    "isEntry": true
+  },
+  "theming/js/search-form.js": {
+    "file": "search-form.js",
+    "name": "search-form",
+    "src": "theming/js/search-form.js",
+    "isEntry": true
+  },
+  "theming/js/share.js": {
+    "file": "share.js",
+    "name": "share",
+    "src": "theming/js/share.js",
+    "isEntry": true
+  },
+  "theming/js/show-more.js": {
+    "file": "show-more.js",
+    "name": "show-more",
+    "src": "theming/js/show-more.js",
+    "isEntry": true
+  },
+  "theming/js/swiper-slider.js": {
+    "file": "swiper-slider.js",
+    "name": "swiper-slider",
+    "src": "theming/js/swiper-slider.js",
+    "isEntry": true
+  },
+  "theming/js/theme-editor.js": {
+    "file": "theme-editor.js",
+    "name": "theme-editor",
+    "src": "theming/js/theme-editor.js",
+    "isEntry": true
+  },
+  "theming/scss/_variables.scss": {
+    "file": "_variables.css.js",
+    "name": "_variables.css",
+    "src": "theming/scss/_variables.scss",
+    "isEntry": true
+  },
+  "theming/scss/component/accordion.scss": {
+    "file": "component-accordion.css",
+    "src": "theming/scss/component/accordion.scss",
+    "isEntry": true,
+    "names": [
+      "component-accordion.css",
+      "other-accordion.css"
+    ]
+  },
+  "theming/scss/component/article-card.scss": {
+    "file": "component-article-card.css",
+    "src": "theming/scss/component/article-card.scss",
+    "isEntry": true,
+    "names": [
+      "component-article-card.css",
+      "other-article-card.css"
+    ]
+  },
+  "theming/scss/component/card.scss": {
+    "file": "component-card.css",
+    "src": "theming/scss/component/card.scss",
+    "isEntry": true,
+    "names": [
+      "component-card.css"
+    ]
+  },
+  "theming/scss/component/cart-drawer.scss": {
+    "file": "component-cart-drawer.css",
+    "src": "theming/scss/component/cart-drawer.scss",
+    "isEntry": true,
+    "names": [
+      "component-cart-drawer.css"
+    ]
+  },
+  "theming/scss/component/cart-items.scss": {
+    "file": "component-cart-items.css",
+    "src": "theming/scss/component/cart-items.scss",
+    "isEntry": true,
+    "names": [
+      "component-cart-items.css",
+      "other-cart-items.css"
+    ]
+  },
+  "theming/scss/component/cart-notification.scss": {
+    "file": "component-cart-notification.css",
+    "src": "theming/scss/component/cart-notification.scss",
+    "isEntry": true,
+    "names": [
+      "component-cart-notification.css",
+      "other-cart-notification.css"
+    ]
+  },
+  "theming/scss/component/cart.scss": {
+    "file": "component-cart.css",
+    "src": "theming/scss/component/cart.scss",
+    "isEntry": true,
+    "names": [
+      "component-cart.css",
+      "other-cart.css"
+    ]
+  },
+  "theming/scss/component/collection-hero.scss": {
+    "file": "component-collection-hero.css",
+    "src": "theming/scss/component/collection-hero.scss",
+    "isEntry": true,
+    "names": [
+      "component-collection-hero.css",
+      "other-collection-hero.css"
+    ]
+  },
+  "theming/scss/component/complementary-products.scss": {
+    "file": "component-complementary-products.css",
+    "src": "theming/scss/component/complementary-products.scss",
+    "isEntry": true,
+    "names": [
+      "component-complementary-products.css",
+      "other-complementary-products.css"
+    ]
+  },
+  "theming/scss/component/deferred-media.scss": {
+    "file": "component-deferred-media.css",
+    "src": "theming/scss/component/deferred-media.scss",
+    "isEntry": true,
+    "names": [
+      "component-deferred-media.css"
+    ]
+  },
+  "theming/scss/component/discounts.scss": {
+    "file": "component-discounts.css",
+    "src": "theming/scss/component/discounts.scss",
+    "isEntry": true,
+    "names": [
+      "component-discounts.css",
+      "other-discounts.css"
+    ]
+  },
+  "theming/scss/component/facets.scss": {
+    "file": "component-facets.css",
+    "src": "theming/scss/component/facets.scss",
+    "isEntry": true,
+    "names": [
+      "component-facets.css"
+    ]
+  },
+  "theming/scss/component/image-with-text.scss": {
+    "file": "component-image-with-text.css",
+    "src": "theming/scss/component/image-with-text.scss",
+    "isEntry": true,
+    "names": [
+      "component-image-with-text.css"
+    ]
+  },
+  "theming/scss/component/list-menu.scss": {
+    "file": "component-list-menu.css",
+    "src": "theming/scss/component/list-menu.scss",
+    "isEntry": true,
+    "names": [
+      "component-list-menu.css",
+      "other-list-menu.css"
+    ]
+  },
+  "theming/scss/component/list-payment.scss": {
+    "file": "component-list-payment.css",
+    "src": "theming/scss/component/list-payment.scss",
+    "isEntry": true,
+    "names": [
+      "component-list-payment.css",
+      "other-list-payment.css"
+    ]
+  },
+  "theming/scss/component/list-social.scss": {
+    "file": "component-list-social.css",
+    "src": "theming/scss/component/list-social.scss",
+    "isEntry": true,
+    "names": [
+      "component-list-social.css",
+      "other-list-social.css"
+    ]
+  },
+  "theming/scss/component/localization-form.scss": {
+    "file": "component-localization-form.css",
+    "src": "theming/scss/component/localization-form.scss",
+    "isEntry": true,
+    "names": [
+      "component-localization-form.css"
+    ]
+  },
+  "theming/scss/component/mega-menu.scss": {
+    "file": "component-mega-menu.css",
+    "src": "theming/scss/component/mega-menu.scss",
+    "isEntry": true,
+    "names": [
+      "component-mega-menu.css",
+      "other-mega-menu.css"
+    ]
+  },
+  "theming/scss/component/menu-drawer.scss": {
+    "file": "component-menu-drawer.css",
+    "src": "theming/scss/component/menu-drawer.scss",
+    "isEntry": true,
+    "names": [
+      "component-menu-drawer.css"
+    ]
+  },
+  "theming/scss/component/modal-video.scss": {
+    "file": "component-modal-video.css",
+    "src": "theming/scss/component/modal-video.scss",
+    "isEntry": true,
+    "names": [
+      "component-modal-video.css",
+      "other-modal-video.css"
+    ]
+  },
+  "theming/scss/component/model-viewer-ui.scss": {
+    "file": "component-model-viewer-ui.css",
+    "src": "theming/scss/component/model-viewer-ui.scss",
+    "isEntry": true,
+    "names": [
+      "component-model-viewer-ui.css",
+      "other-model-viewer-ui.css"
+    ]
+  },
+  "theming/scss/component/newsletter.scss": {
+    "file": "component-newsletter.css",
+    "src": "theming/scss/component/newsletter.scss",
+    "isEntry": true,
+    "names": [
+      "component-newsletter.css",
+      "other-newsletter.css"
+    ]
+  },
+  "theming/scss/component/pagination.scss": {
+    "file": "component-pagination.css",
+    "src": "theming/scss/component/pagination.scss",
+    "isEntry": true,
+    "names": [
+      "component-pagination.css",
+      "other-pagination.css"
+    ]
+  },
+  "theming/scss/component/pickup-availability.scss": {
+    "file": "component-pickup-availability.css",
+    "src": "theming/scss/component/pickup-availability.scss",
+    "isEntry": true,
+    "names": [
+      "component-pickup-availability.css"
+    ]
+  },
+  "theming/scss/component/predictive-search.scss": {
+    "file": "component-predictive-search.css",
+    "src": "theming/scss/component/predictive-search.scss",
+    "isEntry": true,
+    "names": [
+      "component-predictive-search.css"
+    ]
+  },
+  "theming/scss/component/price.scss": {
+    "file": "component-price.css",
+    "src": "theming/scss/component/price.scss",
+    "isEntry": true,
+    "names": [
+      "component-price.css",
+      "other-price.css"
+    ]
+  },
+  "theming/scss/component/product-model.scss": {
+    "file": "component-product-model.css",
+    "src": "theming/scss/component/product-model.scss",
+    "isEntry": true,
+    "names": [
+      "component-product-model.css",
+      "other-product-model.css"
+    ]
+  },
+  "theming/scss/component/product-variant-picker.scss": {
+    "file": "component-product-variant-picker.css",
+    "src": "theming/scss/component/product-variant-picker.scss",
+    "isEntry": true,
+    "names": [
+      "component-product-variant-picker.css"
+    ]
+  },
+  "theming/scss/component/progress-bar.scss": {
+    "file": "component-progress-bar.css",
+    "src": "theming/scss/component/progress-bar.scss",
+    "isEntry": true,
+    "names": [
+      "component-progress-bar.css",
+      "other-progress-bar.css"
+    ]
+  },
+  "theming/scss/component/rating.scss": {
+    "file": "component-rating.css",
+    "src": "theming/scss/component/rating.scss",
+    "isEntry": true,
+    "names": [
+      "component-rating.css"
+    ]
+  },
+  "theming/scss/component/search.scss": {
+    "file": "component-search.css",
+    "src": "theming/scss/component/search.scss",
+    "isEntry": true,
+    "names": [
+      "component-search.css",
+      "other-search.css"
+    ]
+  },
+  "theming/scss/component/show-more.scss": {
+    "file": "component-show-more.css",
+    "src": "theming/scss/component/show-more.scss",
+    "isEntry": true,
+    "names": [
+      "component-show-more.css",
+      "other-show-more.css"
+    ]
+  },
+  "theming/scss/component/slider.scss": {
+    "file": "component-slider.css",
+    "src": "theming/scss/component/slider.scss",
+    "isEntry": true,
+    "names": [
+      "component-slider.css"
+    ]
+  },
+  "theming/scss/component/slideshow.scss": {
+    "file": "component-slideshow.css",
+    "src": "theming/scss/component/slideshow.scss",
+    "isEntry": true,
+    "names": [
+      "component-slideshow.css",
+      "other-slideshow.css"
+    ]
+  },
+  "theming/scss/component/swatch-input.scss": {
+    "file": "component-swatch-input.css",
+    "src": "theming/scss/component/swatch-input.scss",
+    "isEntry": true,
+    "names": [
+      "component-swatch-input.css"
+    ]
+  },
+  "theming/scss/component/swatch.scss": {
+    "file": "component-swatch.css",
+    "src": "theming/scss/component/swatch.scss",
+    "isEntry": true,
+    "names": [
+      "component-swatch.css",
+      "other-swatch.css"
+    ]
+  },
+  "theming/scss/component/totals.scss": {
+    "file": "component-totals.css",
+    "src": "theming/scss/component/totals.scss",
+    "isEntry": true,
+    "names": [
+      "component-totals.css",
+      "other-totals.css"
+    ]
+  },
+  "theming/scss/component/volume-pricing.scss": {
+    "file": "component-volume-pricing.css",
+    "src": "theming/scss/component/volume-pricing.scss",
+    "isEntry": true,
+    "names": [
+      "component-volume-pricing.css",
+      "other-volume-pricing.css"
+    ]
+  },
+  "theming/scss/other/Uniq_tabAcc.scss": {
+    "file": "other-Uniq_tabAcc.css",
+    "src": "theming/scss/other/Uniq_tabAcc.scss",
+    "isEntry": true,
+    "names": [
+      "other-Uniq_tabAcc.css"
+    ]
+  },
+  "theming/scss/other/accordian1.scss": {
+    "file": "other-accordian1.css",
+    "src": "theming/scss/other/accordian1.scss",
+    "isEntry": true,
+    "names": [
+      "other-accordian1.css"
+    ]
+  },
+  "theming/scss/other/accordian2.scss": {
+    "file": "other-accordian2.css",
+    "src": "theming/scss/other/accordian2.scss",
+    "isEntry": true,
+    "names": [
+      "other-accordian2.css"
+    ]
+  },
+  "theming/scss/other/accordion.scss": {
+    "file": "component-accordion.css",
+    "src": "theming/scss/component/accordion.scss",
+    "isEntry": true,
+    "names": [
+      "component-accordion.css",
+      "other-accordion.css"
+    ]
+  },
+  "theming/scss/other/article-card.scss": {
+    "file": "component-article-card.css",
+    "src": "theming/scss/component/article-card.scss",
+    "isEntry": true,
+    "names": [
+      "component-article-card.css",
+      "other-article-card.css"
+    ]
+  },
+  "theming/scss/other/base.scss": {
+    "file": "other-base.css",
+    "src": "theming/scss/other/base.scss",
+    "isEntry": true,
+    "names": [
+      "other-base.css"
+    ]
+  },
+  "theming/scss/other/blog-post.scss": {
+    "file": "other-blog-post.css",
+    "src": "theming/scss/other/blog-post.scss",
+    "isEntry": true,
+    "names": [
+      "other-blog-post.css",
+      "section-blog-post.css"
+    ]
+  },
+  "theming/scss/other/card.scss": {
+    "file": "other-card.css",
+    "src": "theming/scss/other/card.scss",
+    "isEntry": true,
+    "names": [
+      "other-card.css"
+    ]
+  },
+  "theming/scss/other/cart-drawer.scss": {
+    "file": "other-cart-drawer.css",
+    "src": "theming/scss/other/cart-drawer.scss",
+    "isEntry": true,
+    "names": [
+      "other-cart-drawer.css"
+    ]
+  },
+  "theming/scss/other/cart-items.scss": {
+    "file": "component-cart-items.css",
+    "src": "theming/scss/component/cart-items.scss",
+    "isEntry": true,
+    "names": [
+      "component-cart-items.css",
+      "other-cart-items.css"
+    ]
+  },
+  "theming/scss/other/cart-notification.scss": {
+    "file": "component-cart-notification.css",
+    "src": "theming/scss/component/cart-notification.scss",
+    "isEntry": true,
+    "names": [
+      "component-cart-notification.css",
+      "other-cart-notification.css"
+    ]
+  },
+  "theming/scss/other/cart.scss": {
+    "file": "component-cart.css",
+    "src": "theming/scss/component/cart.scss",
+    "isEntry": true,
+    "names": [
+      "component-cart.css",
+      "other-cart.css"
+    ]
+  },
+  "theming/scss/other/collage.scss": {
+    "file": "other-collage.css",
+    "src": "theming/scss/other/collage.scss",
+    "isEntry": true,
+    "names": [
+      "other-collage.css"
+    ]
+  },
+  "theming/scss/other/collapsible-content.scss": {
+    "file": "other-collapsible-content.css",
+    "src": "theming/scss/other/collapsible-content.scss",
+    "isEntry": true,
+    "names": [
+      "other-collapsible-content.css"
+    ]
+  },
+  "theming/scss/other/collection-hero.scss": {
+    "file": "component-collection-hero.css",
+    "src": "theming/scss/component/collection-hero.scss",
+    "isEntry": true,
+    "names": [
+      "component-collection-hero.css",
+      "other-collection-hero.css"
+    ]
+  },
+  "theming/scss/other/collection-list.scss": {
+    "file": "other-collection-list.css",
+    "src": "theming/scss/other/collection-list.scss",
+    "isEntry": true,
+    "names": [
+      "other-collection-list.css",
+      "section-collection-list.css"
+    ]
+  },
+  "theming/scss/other/complementary-products.scss": {
+    "file": "component-complementary-products.css",
+    "src": "theming/scss/component/complementary-products.scss",
+    "isEntry": true,
+    "names": [
+      "component-complementary-products.css",
+      "other-complementary-products.css"
+    ]
+  },
+  "theming/scss/other/contact-form.scss": {
+    "file": "other-contact-form.css",
+    "src": "theming/scss/other/contact-form.scss",
+    "isEntry": true,
+    "names": [
+      "other-contact-form.css",
+      "section-contact-form.css"
+    ]
+  },
+  "theming/scss/other/custom.scss": {
+    "file": "other-custom.css",
+    "src": "theming/scss/other/custom.scss",
+    "isEntry": true,
+    "names": [
+      "other-custom.css",
+      "other-styles.css",
+      "styles.css"
+    ]
+  },
+  "theming/scss/other/customer.scss": {
+    "file": "other-customer.css",
+    "src": "theming/scss/other/customer.scss",
+    "isEntry": true,
+    "names": [
+      "other-customer.css"
+    ]
+  },
+  "theming/scss/other/deferred-media.scss": {
+    "file": "other-deferred-media.css",
+    "src": "theming/scss/other/deferred-media.scss",
+    "isEntry": true,
+    "names": [
+      "other-deferred-media.css"
+    ]
+  },
+  "theming/scss/other/discounts.scss": {
+    "file": "component-discounts.css",
+    "src": "theming/scss/component/discounts.scss",
+    "isEntry": true,
+    "names": [
+      "component-discounts.css",
+      "other-discounts.css"
+    ]
+  },
+  "theming/scss/other/email-signup-banner.scss": {
+    "file": "other-email-signup-banner.css",
+    "src": "theming/scss/other/email-signup-banner.scss",
+    "isEntry": true,
+    "names": [
+      "other-email-signup-banner.css"
+    ]
+  },
+  "theming/scss/other/facets.scss": {
+    "file": "other-facets.css",
+    "src": "theming/scss/other/facets.scss",
+    "isEntry": true,
+    "names": [
+      "other-facets.css"
+    ]
+  },
+  "theming/scss/other/featured-blog.scss": {
+    "file": "other-featured-blog.css",
+    "src": "theming/scss/other/featured-blog.scss",
+    "isEntry": true,
+    "names": [
+      "other-featured-blog.css",
+      "section-featured-blog.css"
+    ]
+  },
+  "theming/scss/other/featured-product.scss": {
+    "file": "other-featured-product.css",
+    "src": "theming/scss/other/featured-product.scss",
+    "isEntry": true,
+    "names": [
+      "other-featured-product.css",
+      "section-featured-product.css"
+    ]
+  },
+  "theming/scss/other/footer.scss": {
+    "file": "other-footer.css",
+    "src": "theming/scss/other/footer.scss",
+    "isEntry": true,
+    "names": [
+      "other-footer.css"
+    ]
+  },
+  "theming/scss/other/group.scss": {
+    "file": "other-group.css",
+    "src": "theming/scss/other/group.scss",
+    "isEntry": true,
+    "names": [
+      "other-group.css"
+    ]
+  },
+  "theming/scss/other/image-banner.scss": {
+    "file": "other-image-banner.css",
+    "src": "theming/scss/other/image-banner.scss",
+    "isEntry": true,
+    "names": [
+      "other-image-banner.css"
+    ]
+  },
+  "theming/scss/other/image-with-text.scss": {
+    "file": "other-image-with-text.css",
+    "src": "theming/scss/other/image-with-text.scss",
+    "isEntry": true,
+    "names": [
+      "other-image-with-text.css"
+    ]
+  },
+  "theming/scss/other/list-menu.scss": {
+    "file": "component-list-menu.css",
+    "src": "theming/scss/component/list-menu.scss",
+    "isEntry": true,
+    "names": [
+      "component-list-menu.css",
+      "other-list-menu.css"
+    ]
+  },
+  "theming/scss/other/list-payment.scss": {
+    "file": "component-list-payment.css",
+    "src": "theming/scss/component/list-payment.scss",
+    "isEntry": true,
+    "names": [
+      "component-list-payment.css",
+      "other-list-payment.css"
+    ]
+  },
+  "theming/scss/other/list-social.scss": {
+    "file": "component-list-social.css",
+    "src": "theming/scss/component/list-social.scss",
+    "isEntry": true,
+    "names": [
+      "component-list-social.css",
+      "other-list-social.css"
+    ]
+  },
+  "theming/scss/other/localization-form.scss": {
+    "file": "other-localization-form.css",
+    "src": "theming/scss/other/localization-form.scss",
+    "isEntry": true,
+    "names": [
+      "other-localization-form.css"
+    ]
+  },
+  "theming/scss/other/main-blog.scss": {
+    "file": "other-main-blog.css",
+    "src": "theming/scss/other/main-blog.scss",
+    "isEntry": true,
+    "names": [
+      "other-main-blog.css",
+      "section-main-blog.css"
+    ]
+  },
+  "theming/scss/other/main-page.scss": {
+    "file": "other-main-page.css",
+    "src": "theming/scss/other/main-page.scss",
+    "isEntry": true,
+    "names": [
+      "other-main-page.css",
+      "section-main-page.css"
+    ]
+  },
+  "theming/scss/other/main-product.scss": {
+    "file": "other-main-product.css",
+    "src": "theming/scss/other/main-product.scss",
+    "isEntry": true,
+    "names": [
+      "other-main-product.css"
+    ]
+  },
+  "theming/scss/other/mask-blobs.scss": {
+    "file": "other-mask-blobs.css",
+    "src": "theming/scss/other/mask-blobs.scss",
+    "isEntry": true,
+    "names": [
+      "other-mask-blobs.css"
+    ]
+  },
+  "theming/scss/other/mega-menu.scss": {
+    "file": "component-mega-menu.css",
+    "src": "theming/scss/component/mega-menu.scss",
+    "isEntry": true,
+    "names": [
+      "component-mega-menu.css",
+      "other-mega-menu.css"
+    ]
+  },
+  "theming/scss/other/menu-drawer.scss": {
+    "file": "other-menu-drawer.css",
+    "src": "theming/scss/other/menu-drawer.scss",
+    "isEntry": true,
+    "names": [
+      "other-menu-drawer.css"
+    ]
+  },
+  "theming/scss/other/modal-video.scss": {
+    "file": "component-modal-video.css",
+    "src": "theming/scss/component/modal-video.scss",
+    "isEntry": true,
+    "names": [
+      "component-modal-video.css",
+      "other-modal-video.css"
+    ]
+  },
+  "theming/scss/other/model-viewer-ui.scss": {
+    "file": "component-model-viewer-ui.css",
+    "src": "theming/scss/component/model-viewer-ui.scss",
+    "isEntry": true,
+    "names": [
+      "component-model-viewer-ui.css",
+      "other-model-viewer-ui.css"
+    ]
+  },
+  "theming/scss/other/multicolumn.scss": {
+    "file": "other-multicolumn.css",
+    "src": "theming/scss/other/multicolumn.scss",
+    "isEntry": true,
+    "names": [
+      "other-multicolumn.css",
+      "section-multicolumn.css"
+    ]
+  },
+  "theming/scss/other/newsletter-section.scss": {
+    "file": "other-newsletter-section.css",
+    "src": "theming/scss/other/newsletter-section.scss",
+    "isEntry": true,
+    "names": [
+      "other-newsletter-section.css"
+    ]
+  },
+  "theming/scss/other/newsletter.scss": {
+    "file": "component-newsletter.css",
+    "src": "theming/scss/component/newsletter.scss",
+    "isEntry": true,
+    "names": [
+      "component-newsletter.css",
+      "other-newsletter.css"
+    ]
+  },
+  "theming/scss/other/pagefly-main.scss": {
+    "file": "other-pagefly-main.css",
+    "src": "theming/scss/other/pagefly-main.scss",
+    "isEntry": true,
+    "names": [
+      "other-pagefly-main.css"
+    ]
+  },
+  "theming/scss/other/pagination.scss": {
+    "file": "component-pagination.css",
+    "src": "theming/scss/component/pagination.scss",
+    "isEntry": true,
+    "names": [
+      "component-pagination.css",
+      "other-pagination.css"
+    ]
+  },
+  "theming/scss/other/password.scss": {
+    "file": "other-password.css",
+    "src": "theming/scss/other/password.scss",
+    "isEntry": true,
+    "names": [
+      "other-password.css"
+    ]
+  },
+  "theming/scss/other/pickup-availability.scss": {
+    "file": "other-pickup-availability.css",
+    "src": "theming/scss/other/pickup-availability.scss",
+    "isEntry": true,
+    "names": [
+      "other-pickup-availability.css"
+    ]
+  },
+  "theming/scss/other/predictive-search.scss": {
+    "file": "other-predictive-search.css",
+    "src": "theming/scss/other/predictive-search.scss",
+    "isEntry": true,
+    "names": [
+      "other-predictive-search.css"
+    ]
+  },
+  "theming/scss/other/price.scss": {
+    "file": "component-price.css",
+    "src": "theming/scss/component/price.scss",
+    "isEntry": true,
+    "names": [
+      "component-price.css",
+      "other-price.css"
+    ]
+  },
+  "theming/scss/other/product-model.scss": {
+    "file": "component-product-model.css",
+    "src": "theming/scss/component/product-model.scss",
+    "isEntry": true,
+    "names": [
+      "component-product-model.css",
+      "other-product-model.css"
+    ]
+  },
+  "theming/scss/other/product-variant-picker.scss": {
+    "file": "other-product-variant-picker.css",
+    "src": "theming/scss/other/product-variant-picker.scss",
+    "isEntry": true,
+    "names": [
+      "other-product-variant-picker.css"
+    ]
+  },
+  "theming/scss/other/progress-bar.scss": {
+    "file": "component-progress-bar.css",
+    "src": "theming/scss/component/progress-bar.scss",
+    "isEntry": true,
+    "names": [
+      "component-progress-bar.css",
+      "other-progress-bar.css"
+    ]
+  },
+  "theming/scss/other/quantity-popover.scss": {
+    "file": "other-quantity-popover.css",
+    "src": "theming/scss/other/quantity-popover.scss",
+    "isEntry": true,
+    "names": [
+      "other-quantity-popover.css"
+    ]
+  },
+  "theming/scss/other/quick-add.scss": {
+    "file": "other-quick-add.css",
+    "src": "theming/scss/other/quick-add.scss",
+    "isEntry": true,
+    "names": [
+      "other-quick-add.css"
+    ]
+  },
+  "theming/scss/other/quick-order-list.scss": {
+    "file": "other-quick-order-list.css",
+    "src": "theming/scss/other/quick-order-list.scss",
+    "isEntry": true,
+    "names": [
+      "other-quick-order-list.css"
+    ]
+  },
+  "theming/scss/other/rating.scss": {
+    "file": "other-rating.css",
+    "src": "theming/scss/other/rating.scss",
+    "isEntry": true,
+    "names": [
+      "other-rating.css"
+    ]
+  },
+  "theming/scss/other/related-products.scss": {
+    "file": "other-related-products.css",
+    "src": "theming/scss/other/related-products.scss",
+    "isEntry": true,
+    "names": [
+      "other-related-products.css",
+      "section-related-products.css"
+    ]
+  },
+  "theming/scss/other/rich-text.scss": {
+    "file": "other-rich-text.css",
+    "src": "theming/scss/other/rich-text.scss",
+    "isEntry": true,
+    "names": [
+      "other-rich-text.css",
+      "section-rich-text.css"
+    ]
+  },
+  "theming/scss/other/search.scss": {
+    "file": "component-search.css",
+    "src": "theming/scss/component/search.scss",
+    "isEntry": true,
+    "names": [
+      "component-search.css",
+      "other-search.css"
+    ]
+  },
+  "theming/scss/other/show-more.scss": {
+    "file": "component-show-more.css",
+    "src": "theming/scss/component/show-more.scss",
+    "isEntry": true,
+    "names": [
+      "component-show-more.css",
+      "other-show-more.css"
+    ]
+  },
+  "theming/scss/other/slider.scss": {
+    "file": "other-slider.css",
+    "src": "theming/scss/other/slider.scss",
+    "isEntry": true,
+    "names": [
+      "other-slider.css"
+    ]
+  },
+  "theming/scss/other/slideshow.scss": {
+    "file": "component-slideshow.css",
+    "src": "theming/scss/component/slideshow.scss",
+    "isEntry": true,
+    "names": [
+      "component-slideshow.css",
+      "other-slideshow.css"
+    ]
+  },
+  "theming/scss/other/styles.scss": {
+    "file": "other-custom.css",
+    "src": "theming/scss/other/custom.scss",
+    "isEntry": true,
+    "names": [
+      "other-custom.css",
+      "other-styles.css",
+      "styles.css"
+    ]
+  },
+  "theming/scss/other/swatch-input.scss": {
+    "file": "other-swatch-input.css",
+    "src": "theming/scss/other/swatch-input.scss",
+    "isEntry": true,
+    "names": [
+      "other-swatch-input.css"
+    ]
+  },
+  "theming/scss/other/swatch.scss": {
+    "file": "component-swatch.css",
+    "src": "theming/scss/component/swatch.scss",
+    "isEntry": true,
+    "names": [
+      "component-swatch.css",
+      "other-swatch.css"
+    ]
+  },
+  "theming/scss/other/swiper-slider.scss": {
+    "file": "other-swiper-slider.css",
+    "src": "theming/scss/other/swiper-slider.scss",
+    "isEntry": true,
+    "names": [
+      "other-swiper-slider.css"
+    ]
+  },
+  "theming/scss/other/template-collection.scss": {
+    "file": "other-template-collection.css",
+    "src": "theming/scss/other/template-collection.scss",
+    "isEntry": true,
+    "names": [
+      "other-template-collection.css"
+    ]
+  },
+  "theming/scss/other/template-giftcard.scss": {
+    "file": "other-template-giftcard.css",
+    "src": "theming/scss/other/template-giftcard.scss",
+    "isEntry": true,
+    "names": [
+      "other-template-giftcard.css"
+    ]
+  },
+  "theming/scss/other/text.scss": {
+    "file": "other-text.css",
+    "src": "theming/scss/other/text.scss",
+    "isEntry": true,
+    "names": [
+      "other-text.css"
+    ]
+  },
+  "theming/scss/other/text2.scss": {
+    "file": "other-text2.css",
+    "src": "theming/scss/other/text2.scss",
+    "isEntry": true,
+    "names": [
+      "other-text2.css"
+    ]
+  },
+  "theming/scss/other/totals.scss": {
+    "file": "component-totals.css",
+    "src": "theming/scss/component/totals.scss",
+    "isEntry": true,
+    "names": [
+      "component-totals.css",
+      "other-totals.css"
+    ]
+  },
+  "theming/scss/other/video-section.scss": {
+    "file": "other-video-section.css",
+    "src": "theming/scss/other/video-section.scss",
+    "isEntry": true,
+    "names": [
+      "other-video-section.css"
+    ]
+  },
+  "theming/scss/other/volume-pricing.scss": {
+    "file": "component-volume-pricing.css",
+    "src": "theming/scss/component/volume-pricing.scss",
+    "isEntry": true,
+    "names": [
+      "component-volume-pricing.css",
+      "other-volume-pricing.css"
+    ]
+  },
+  "theming/scss/section/blog-post.scss": {
+    "file": "other-blog-post.css",
+    "src": "theming/scss/other/blog-post.scss",
+    "isEntry": true,
+    "names": [
+      "other-blog-post.css",
+      "section-blog-post.css"
+    ]
+  },
+  "theming/scss/section/collection-list.scss": {
+    "file": "other-collection-list.css",
+    "src": "theming/scss/other/collection-list.scss",
+    "isEntry": true,
+    "names": [
+      "other-collection-list.css",
+      "section-collection-list.css"
+    ]
+  },
+  "theming/scss/section/contact-form.scss": {
+    "file": "other-contact-form.css",
+    "src": "theming/scss/other/contact-form.scss",
+    "isEntry": true,
+    "names": [
+      "other-contact-form.css",
+      "section-contact-form.css"
+    ]
+  },
+  "theming/scss/section/email-signup-banner.scss": {
+    "file": "section-email-signup-banner.css",
+    "src": "theming/scss/section/email-signup-banner.scss",
+    "isEntry": true,
+    "names": [
+      "section-email-signup-banner.css"
+    ]
+  },
+  "theming/scss/section/featured-blog.scss": {
+    "file": "other-featured-blog.css",
+    "src": "theming/scss/other/featured-blog.scss",
+    "isEntry": true,
+    "names": [
+      "other-featured-blog.css",
+      "section-featured-blog.css"
+    ]
+  },
+  "theming/scss/section/featured-product.scss": {
+    "file": "other-featured-product.css",
+    "src": "theming/scss/other/featured-product.scss",
+    "isEntry": true,
+    "names": [
+      "other-featured-product.css",
+      "section-featured-product.css"
+    ]
+  },
+  "theming/scss/section/footer.scss": {
+    "file": "section-footer.css",
+    "src": "theming/scss/section/footer.scss",
+    "isEntry": true,
+    "names": [
+      "section-footer.css"
+    ]
+  },
+  "theming/scss/section/image-banner.scss": {
+    "file": "section-image-banner.css",
+    "src": "theming/scss/section/image-banner.scss",
+    "isEntry": true,
+    "names": [
+      "section-image-banner.css"
+    ]
+  },
+  "theming/scss/section/main-blog.scss": {
+    "file": "other-main-blog.css",
+    "src": "theming/scss/other/main-blog.scss",
+    "isEntry": true,
+    "names": [
+      "other-main-blog.css",
+      "section-main-blog.css"
+    ]
+  },
+  "theming/scss/section/main-page.scss": {
+    "file": "other-main-page.css",
+    "src": "theming/scss/other/main-page.scss",
+    "isEntry": true,
+    "names": [
+      "other-main-page.css",
+      "section-main-page.css"
+    ]
+  },
+  "theming/scss/section/main-product.scss": {
+    "file": "section-main-product.css",
+    "src": "theming/scss/section/main-product.scss",
+    "isEntry": true,
+    "names": [
+      "section-main-product.css"
+    ]
+  },
+  "theming/scss/section/multicolumn.scss": {
+    "file": "other-multicolumn.css",
+    "src": "theming/scss/other/multicolumn.scss",
+    "isEntry": true,
+    "names": [
+      "other-multicolumn.css",
+      "section-multicolumn.css"
+    ]
+  },
+  "theming/scss/section/password.scss": {
+    "file": "section-password.css",
+    "src": "theming/scss/section/password.scss",
+    "isEntry": true,
+    "names": [
+      "section-password.css"
+    ]
+  },
+  "theming/scss/section/related-products.scss": {
+    "file": "other-related-products.css",
+    "src": "theming/scss/other/related-products.scss",
+    "isEntry": true,
+    "names": [
+      "other-related-products.css",
+      "section-related-products.css"
+    ]
+  },
+  "theming/scss/section/rich-text.scss": {
+    "file": "other-rich-text.css",
+    "src": "theming/scss/other/rich-text.scss",
+    "isEntry": true,
+    "names": [
+      "other-rich-text.css",
+      "section-rich-text.css"
+    ]
+  },
+  "theming/scss/styles.scss": {
+    "file": "other-custom.css",
+    "src": "theming/scss/other/custom.scss",
+    "isEntry": true,
+    "names": [
+      "other-custom.css",
+      "other-styles.css",
+      "styles.css"
+    ]
+  }
+}

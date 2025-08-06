@@ -1,0 +1,75 @@
+<div class="about">
+  <div class="map"> 
+    <h2>Our Location</h2>
+    <iframe 
+       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.047055660982!2d72.56973787524803!3d23.02307941615056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f108ddbbdf%3A0xf803805bf742d5d1!2sMcDonald&#39;s%20Ashram%20Road!5e0!3m2!1sen!2sin!4v1720932050323!5m2!1sen!2sin" 
+       width="100%" 
+       height="300" 
+       style="border:0;" 
+       allowfullscreen="" 
+       loading="lazy" 
+       referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  <div>
+    <h2>About Us</h2>
+    <p>Contact Number:<span>1234567890</span></p>
+    <p>EmailID: <span> abc123@gmail.com</span></p>
+    <p>Address:  <span>52 Greenfield Avenue, Sector 5, <br> New Delhi - 110085, India</span>  </p>
+    <p>We are Open: <span>8:00 AM to 8:00 PM</span> </p>
+  </div>
+</div>
+
+
+
+ {% stylesheet %} 
+  div .about{
+     display:flex;
+     gap:30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+   }
+
+   div .about h2{
+     font-size:40px
+   }
+   .about .map{
+     width: 400px;
+   }
+  .about .map iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+   div .about p{
+     color: black;
+     font-weight: 600;
+     font-size: 20px;
+   }
+   div .about p span{
+     font-weight: 400;
+     font-size: 18px;
+   }
+
+/* Responsive for Mobile */
+  @media (max-width: 600px) {
+    .contact-form .form-grid {
+       grid-template-columns: 1fr;
+    }
+  }
+
+ {% endstylesheet %}
+
+
+{% schema %}
+  {
+    "name": "Location",
+    "settings": [],
+    "presets": [
+    {
+      "name": "Location"
+    }
+  ]
+  }
+{% endschema %}

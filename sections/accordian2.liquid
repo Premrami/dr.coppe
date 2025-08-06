@@ -1,0 +1,109 @@
+{{ 'accordian2.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+  <div class="tabs-with-accordions">
+    <div class="tab-buttons">
+      {% for block in section.blocks %}
+        {% if block.type == 'tab' %}
+          <button class="tab-btn{% if forloop.first %} active{% endif %}" data-tab="tab-{{ block.settings.tab_id }}">
+            <h2>{{ block.settings.tab_title }}</h2>
+          </button>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% for block in section.blocks %}
+      {% if block.type == 'tab' %}
+        <div id="tab-{{ block.settings.tab_id }}" class="tab-content{% if forloop.first %} active{% endif %}">
+          {% for acc_block in section.blocks %}
+            {% if acc_block.type == 'accordion' and acc_block.settings.for_tab_id == block.settings.tab_id %}
+              <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <h2>{{ acc_block.settings.title }}</h2>
+                  <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.46778 0.823141C8.76068 0.530241 9.23548 0.530241 9.52838 0.823141L17.1749 8.46964C17.4678 8.76254 17.4678 9.23734 17.1749 9.53024L16.8213 9.88384C16.5284 10.1767 16.0535 10.1767 15.7606 9.88384L8.99808 3.12124L2.23548 9.88384C1.94258 10.1767 1.46778 10.1767 1.17488 9.88384L0.821283 9.53024C0.528383 9.23734 0.528383 8.76254 0.821283 8.46964L8.46778 0.823141Z" fill="black"/>
+                    <path d="M1.88184 9.53027C1.78419 9.62787 1.62594 9.6279 1.52832 9.53027L1.1748 9.17676C1.07718 9.07913 1.07721 8.92088 1.1748 8.82324L8.82129 1.17676C8.91893 1.07912 9.07717 1.07912 9.1748 1.17676L16.8213 8.82324C16.9189 8.92088 16.9189 9.07912 16.8213 9.17676L16.4678 9.53027C16.3702 9.62789 16.2119 9.62789 16.1143 9.53027L8.99805 2.41406L1.88184 9.53027Z" stroke="black" stroke-opacity="0.3"/>
+                  </svg>
+                </div>
+                <div class="accordion-body">
+                  {{ acc_block.settings.content }}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+<script>
+  // Tabs
+  document.querySelectorAll('.tab-btn').forEach((btn) => {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.getElementById(this.getAttribute('data-tab')).classList.add('active');
+    });
+  });
+
+  // Accordions
+  function toggleAccordion(header) {
+    header.classList.toggle('active');
+   const body = header.nextElementSibling;
+    body.style.display = body.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Tabs with Accordions",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_id",
+          "label": "Tab Unique ID"
+        },
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Title"
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "name": "Accordion Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "for_tab_id",
+          "label": "For Tab ID (must match Tab Unique ID)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Accordion Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Accordion Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tabs-Accordions",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

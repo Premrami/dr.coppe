@@ -1,0 +1,332 @@
+{% comment %} Bundle Builder Page {% endcomment %}
+<div class="bundle-wrapper">
+  <h1>Create Your Bundle</h1>
+  <form id="bundleForm">
+    <div class="products-list">
+      {% assign collection = collections['bundle-products'] %}
+      {% for product in collection.products %}
+        <div
+          class="product-item"
+          data-variant-id="{{ product.variants.first.id }}"
+          data-title="{{ product.title }}"
+          data-price="{{ product.price }}"
+          data-image="{{ product.featured_image | image_url: width: 300 }}"
+        >
+          <img src="{{ product.featured_image | image_url: width: 300 }}" alt="{{ product.title }}">
+          <strong>{{ product.title }}</strong>
+          <p>₹{{ product.price | money_without_currency }}</p>
+          <button type="button" class="select-btn">Select</button>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Bundle Summary -->
+    <div id="bundleSummary">
+      <h3>Selected Products</h3>
+      <div id="selectedProductsList" class="bundle-cards-wrapper"></div>
+      <p class="total-price">
+        <strong>Total Price: ₹<span id="totalPrice">0.00</span></strong>
+      </p>
+    </div>
+
+    <button type="submit" id="addBundleBtn">Add Bundle to Cart</button>
+  </form>
+</div>
+
+<!-- 🧾 CSS: Matches Dawn Theme Product Card -->
+<style>
+  .bundle-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .products-list {
+    display: grid;
+    gap: 15px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .product-item {
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s ease;
+  }
+
+  .product-item:hover {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  .product-item img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .select-btn {
+    margin-top: 10px;
+    padding: 10px 30px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+  }
+
+  .select-btn.selected {
+    background-color: black;
+    color: white;
+    border: none;
+  }
+
+  #bundleSummary {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid #ebebeb;
+    border-radius: 12px;
+    background: #fdfdfd;
+  }
+
+  .bundle-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .summary-card {
+
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: box-shadow 0.2s ease;
+  }
+
+  .summary-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+  }
+
+  .summary-card-body {
+    padding: 10px;
+  }
+
+  .summary-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 6px 0;
+  }
+
+  .summary-card-price {
+    font-size: 15px;
+    color: #666;
+  }
+
+  .plus-sign {
+    font-size: 26px;
+    font-weight: bold;
+    color: #444;
+    align-self: center;
+    margin: 0 8px;
+  }
+
+  .total-price {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #addBundleBtn {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 40px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+  }
+
+  /* === RESPONSIVE LAYOUT === */
+  @media (max-width: 1024px) {
+    .products-list {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .summary-card {
+      width: 160px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .products-list {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+
+    .summary-card {
+      width: 140px;
+    }
+
+    .select-btn {
+      padding: 8px 25px;
+      font-size: 14px;
+    }
+
+    #addBundleBtn {
+      padding: 12px 24px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .products-list {
+      grid-template-columns: 1fr;
+    }
+
+    .product-item, .summary-card {
+      width: 100%;
+    }
+
+    .bundle-cards-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+
+<!-- JavaScript Logic -->
+<script>
+  const selectedProducts = new Map();
+
+  document.querySelectorAll('.select-btn').forEach(button => {
+    button.addEventListener('click', function () {
+      const productItem = this.closest('.product-item');
+      const variantId = parseInt(productItem.dataset.variantId);
+      const title = productItem.dataset.title;
+      const price = parseFloat(productItem.dataset.price) / 100; // Shopify price is in paise
+      const image = productItem.dataset.image;
+
+      if (selectedProducts.has(variantId)) {
+        selectedProducts.delete(variantId);
+        this.classList.remove('selected');
+        this.textContent = 'Select';
+      } else {
+        selectedProducts.set(variantId, { title, price, image });
+        this.classList.add('selected');
+        this.textContent = 'Remove';
+      }
+
+      updateSummary();
+    });
+  });
+
+  function updateSummary() {
+    const summaryBox = document.getElementById('bundleSummary');
+    const productList = document.getElementById('selectedProductsList');
+    const totalPriceEl = document.getElementById('totalPrice');
+
+    productList.innerHTML = '';
+    let total = 0;
+    let count = 0;
+
+    if (selectedProducts.size === 0) {
+      summaryBox.style.display = 'none';
+      return;
+    }
+
+    selectedProducts.forEach((item) => {
+      if (count > 0) {
+        const plus = document.createElement('div');
+        plus.className = 'plus-sign';
+        plus.textContent = '+';
+        productList.appendChild(plus);
+      }
+
+      const card = document.createElement('div');
+      card.className = 'summary-card';
+
+      const img = document.createElement('img');
+      img.src = item.image;
+      img.alt = item.title;
+
+      const body = document.createElement('div');
+      body.className = 'summary-card-body';
+
+      const title = document.createElement('div');
+      title.className = 'summary-card-title';
+      title.textContent = item.title;
+
+      const price = document.createElement('div');
+      price.className = 'summary-card-price';
+      price.textContent = `₹${item.price.toFixed(2)}`;
+
+      body.appendChild(title);
+      body.appendChild(price);
+      card.appendChild(img);
+      card.appendChild(body);
+
+      productList.appendChild(card);
+
+      total += item.price;
+      count++;
+    });
+
+    totalPriceEl.textContent = total.toFixed(2);
+    summaryBox.style.display = 'block';
+  }
+
+  document.getElementById('bundleForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    if (selectedProducts.size === 0) {
+      alert('Please select at least one product.');
+      return;
+    }
+
+    const items = Array.from(selectedProducts.keys()).map(id => ({
+      id,
+      quantity: 1
+    }));
+
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ items })
+    })
+    .then(res => res.json())
+    .then(data => {
+      window.location.href = '/cart';
+    })
+    .catch(error => {
+      console.error(error);
+      alert('Error adding to cart');
+    });
+  });
+</script>

@@ -1,0 +1,163 @@
+<div class="page-width slideshow">
+  {% if section.settings.title != "" %}
+    <h2 class="title">{{ section.settings.title }}</h2>
+  {% endif %}
+
+  <div class="slider-container">
+    <div class="slides">
+      {% for block in section.blocks %}
+        {%- case block.type -%}
+          {%- when "slide" -%}
+            <div class="slide">
+              <img src="{{ block.settings.image | image_url: width: 1098 }}" alt="image">
+            </div>
+          {%- when "announcement" -%}
+            <div class="slide">
+              <h1>{{ block.settings.heading }}</h1>
+            </div>
+        {%- endcase -%}
+      {% endfor %}
+    </div>
+
+    <!-- Navigation buttons -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+</div>
+
+{% stylesheet %}
+
+  .page-width{
+    padding: 50px;
+  }
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 1098px;
+    height: auto;
+
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    
+  }
+
+  .slide {
+    min-width: 100%;
+    height: auto;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .prev { left: 10px; }
+  .next { right: 10px; }
+{% endstylesheet %}
+
+
+{% javascript %}
+  const slides = document.querySelector('.slides');
+  const slideItems = document.querySelectorAll('.slide');
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
+
+  let index = 0;
+  const total = slideItems.length;
+
+  function showSlide(i) {
+    index = (i + total) % total;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => showSlide(index + 1));
+  prevBtn.addEventListener('click', () => showSlide(index - 1));
+
+{% endjavascript %}
+
+
+{% schema %}
+{
+  "name": "Slideshow",
+  "tag": "section",
+  "class": "slideshow",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Slideshow"
+    }
+  ],
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "name": "Announcement",
+      "type": "announcement",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Welcome to our store",
+          "label": "Heading"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slideshow",
+      "settings": {
+        "title": "Slideshow"
+      },
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "title": "Slideshow"
+    },
+    "fr": {
+      "title": "Diaporama"
+    }
+  },
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["footer"]
+  }
+}
+{% endschema %}

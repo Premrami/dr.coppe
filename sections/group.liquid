@@ -1,0 +1,47 @@
+{{ 'group.css' | asset_url | stylesheet_tag }}
+
+<div class="custom-form-section">
+  <div class="page-width">
+    <form id="custom-form" onsubmit="submitCustomForm(event)">
+      <div class="flex">
+        <div class="text">{{ section.settings.placeholder }}</div>
+        <button type="submit">
+          {{ section.settings.button_text }}
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+            <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/>
+          </svg>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Input with Button",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label",
+      "default": "Enter your text"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Placeholder Text",
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Submit"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text with Button"
+    }
+  ]
+}
+{% endschema %}

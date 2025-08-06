@@ -1,0 +1,247 @@
+{% schema %}
+{
+  "name": "Custom Product Bundler",
+  "settings": [
+    {
+      "type": "text",
+      "id": "bundler_title",
+      "label": "Bundler Title",
+      "default": "Create Your Custom Bundle"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Bundler"
+    }
+  ]
+}
+{% endschema %}
+<div class="page-width">
+  <div class="bundler-wrapper">
+    <h2>{{ section.settings.bundler_title }}</h2>
+    <button id="openProductModal">Select Products</button>
+    <div id="selectedProducts" class="selected-products"></div>
+
+    <div class="bundler-summary">
+      <h3>Total: ₹<span id="bundleTotal">0.00</span></h3>
+      <button id="addBundleToCart">Add Bundle to Cart</button>
+    </div>
+  </div>
+
+  <!-- Product Modal -->
+  <div id="productModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Select Products</h3>
+      <button id="closeModal">Close</button>
+      <div id="allProducts" class="product-grids"></div>
+      <button id="confirmSelection">Add Selected</button>
+    </div>
+  </div>
+</div>
+<style>
+    .bundler-wrapper {
+      padding: 2rem;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      background: #f9f9f9;
+    }
+
+  button {
+      padding: 10px 20px;
+      background: white;
+      color: black;
+      margin-top: 1rem;
+      cursor: pointer;
+      border-radius: 40px;
+      border: 2px solid black;
+  }
+
+    .selected-products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .selected-item {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 10px;
+      background: white;
+      width: 180px;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal.hidden {
+      display: none;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      max-width: 800px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 10px;
+    }
+
+    .product-grids {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .product-card {
+      border: 2px solid transparent;
+      padding: 1rem;
+      width: 180px;
+      text-align: center;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #f4f4f4;
+    }
+
+    .product-card.selected {
+      border-color: #007aff;
+      background: #e9f5ff;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    .remove-button {
+      background: red;
+      color: #fff;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const openBtn = document.getElementById('openProductModal');
+  const closeBtn = document.getElementById('closeModal');
+  const confirmBtn = document.getElementById('confirmSelection');
+  const modal = document.getElementById('productModal');
+  const productGrid = document.getElementById('allProducts');
+  const selectedDiv = document.getElementById('selectedProducts');
+  const totalEl = document.getElementById('bundleTotal');
+  const addBtn = document.getElementById('addBundleToCart');
+
+  const selected = new Map();
+  const temp = new Map();
+
+  function updateTotal(){
+    let total = 0;
+    selected.forEach(p => total += p.price);
+    totalEl.textContent = total.toFixed(2);
+  }
+
+  function renderSelected(){
+    selectedDiv.innerHTML = '';
+    selected.forEach(p=>{
+      const el = document.createElement('div');
+      el.innerHTML = `
+        <div style="border:1px solid #ddd;padding:10px;margin:5px;display:flex;gap:10px;align-items:center;flex-direction:column;text-align: center;">
+          <img src="${p.image}" alt="${p.title}" style="width:100px;height:100px;object-fit:cover;">
+          <div>
+            <p style="margin:0;">${p.title}</p>
+            <p style="margin:0;font-weight:bold;">₹${p.price.toFixed(2)}</p>
+           
+          </div>
+        </div>`;
+      selectedDiv.appendChild(el);
+    });
+    selectedDiv.querySelectorAll('.rem').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        selected.delete(btn.dataset.id);
+        renderSelected(); updateTotal();
+      });
+    });
+  }
+
+  function toggleCard(card, data){
+    if(temp.has(data.id)){
+      temp.delete(data.id); card.classList.remove('selected');
+    } else {
+      temp.set(data.id, data); card.classList.add('selected');
+    }
+  }
+
+  function buildCard(p){
+    const v = p.variants[0];
+    const rupees = Number(v.price) ;
+    const img = (p.images && p.images.length > 0) ? p.images[0].src : "https://via.placeholder.com/150";
+
+    const data = {
+      id: v.id,
+      title: p.title,
+      price: rupees,
+      image: img
+    };
+
+    const div = document.createElement('div');
+    div.className = 'product-card';
+    div.style = 'border:1px solid #ccc;padding:10px;margin:10px;cursor:pointer;text-align:center;';
+    div.innerHTML = `
+      <img src="${data.image}" alt="${data.title}" style="width:100px;height:100px;object-fit:cover;" />
+      <h4>${data.title}</h4>
+      <p style="font-weight:bold;">₹${data.price.toFixed(2)}</p>
+    `;
+
+    div.addEventListener('click', () => toggleCard(div, data));
+    productGrid.appendChild(div);
+  }
+
+  openBtn.addEventListener('click', ()=>{
+    temp.clear();
+    productGrid.querySelectorAll('.product-card').forEach(card => card.classList.remove('selected'));
+    modal.classList.remove('hidden');
+  });
+
+  closeBtn.addEventListener('click', ()=>modal.classList.add('hidden'));
+
+  confirmBtn.addEventListener('click', ()=>{
+    temp.forEach((v,k)=>selected.set(k,v));
+    renderSelected(); updateTotal(); modal.classList.add('hidden');
+  });
+
+  addBtn.addEventListener('click', async ()=>{
+    if(selected.size === 0){
+      alert('No products selected');
+      return;
+    }
+
+    for(let p of selected.values()){
+      await fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({id: p.id, quantity: 1})
+      });
+    }
+
+    window.location.href = '/cart';
+  });
+
+  fetch('/products.json?limit=250')
+    .then(r=>r.json())
+    .then(d=>d.products.forEach(buildCard));
+});
+</script>
