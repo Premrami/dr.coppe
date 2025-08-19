@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -273,27 +282,7 @@
       "settings": {
         "heading": "How to Become a Certified Court Reporter"
       },
-      "blocks": {
-        "step1": {
-          "type": "step",
-          "settings": {
-            "title": "Step 1",
-            "description": "Complete Certification Requirements",
-            "button_label": "Orientation Workshop Schedule",
-            "button_link": "#"
-          }
-        },
-        "step2": {
-          "type": "step",
-          "settings": {
-            "title": "Step 2",
-            "description": "Register for the Written Exam",
-            "button_label": "View Exam Dates",
-            "button_link": "#"
-          }
-        }
-      },
-      "block_order": ["step1", "step2"],
+      
       "custom_css": []
     },
     "custom-faq": {
