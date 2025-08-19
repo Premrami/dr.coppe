@@ -1,0 +1,92 @@
+<section class="faq-section">
+  <div class="faq-container">
+    <h2 class="faq-title">
+      {{ section.settings.title }}
+    </h2>
+
+    <div class="faq-list">
+      {% for block in section.blocks %}
+        <div class="faq-item">
+          <button 
+            class="faq-toggle"
+            onclick="toggleFAQ(this)"
+          >
+            {{ block.settings.question }}
+
+            <!-- Default DOWN arrow -->
+            <svg class="faq-arrow down-arrow" width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.72013 1.27987L11 11.5597L21.2799 1.27987" stroke="#1C66A6" stroke-width="2"/>
+            </svg>
+
+            <!-- UP arrow -->
+            <svg class="faq-arrow up-arrow hidden" width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.72013 11.7201L11 1.44026L21.2799 11.7201" stroke="#1C66A6" stroke-width="2"/>
+            </svg>
+          </button>
+
+          <div class="faq-content hidden">
+            {{ block.settings.answer | markdownify }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleFAQ(button) {
+  let content = button.nextElementSibling;
+  let downArrow = button.querySelector('.down-arrow');
+  let upArrow = button.querySelector('.up-arrow');
+
+  // Toggle content
+  content.classList.toggle('hidden');
+
+  // Toggle arrow icons
+  downArrow.classList.toggle('hidden');
+  upArrow.classList.toggle('hidden');
+
+  // Toggle active color
+  button.classList.toggle('active');
+}
+</script>
+
+{% schema %}
+{
+  "name": "custom-faq",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Frequently Asked Questions"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "custom_faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Sample question?"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer",
+          "default": "Sample bullet 1\n- Sample bullet 2"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "FAQ"
+    }
+  ]
+}
+{% endschema %}

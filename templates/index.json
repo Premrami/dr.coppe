@@ -247,6 +247,168 @@
         "button_label": "Browse Collection",
         "button_link": "/collections/belts"
       }
+    },
+    "report_statment": {
+      "type": "report-statment",
+      "settings": {
+        "title": "The Board of Court Reporting of the Judicial Council of Georgia",
+        "paragraph1": "The Georgia General Assembly established the Board of Court Reporting of the Judicial Council of Georgia to license, create standard practices, discipline, and regulate Court Reporting in Georgia. The Board of Court Reporting establishes and enforces standards that govern court reporters and provides a forum for exchanging ideas and educational services.",
+        "paragraph2": "The Judicial Council of Georgia appoints the board members for a term of two years. The Board membership is made of five certified court reporters, two attorney representatives from the State Bar of Georgia, one state court judge, and one superior court judge."
+      }
+    },
+    "board_contact": {
+      "type": "address",
+      "settings": {
+        "title": "The Board of Court Reporting",
+        "address": "Judicial Council/Administrative Office of the Courts\n244 Washington Street, SW – Suite 300\nAtlanta, GA 30334",
+        "phone": "(404) 463-3808",
+        "fax": "(770) 357-9011",
+        "email": "grc@georgiacourts.gov",
+        "button_label": "Board Membership",
+        "button_link": "#"
+      }
+    },
+    "court_reporter_steps": {
+      "type": "court-reporter-steps",
+      "settings": {
+        "heading": "How to Become a Certified Court Reporter"
+      },
+      "blocks": {
+        "step1": {
+          "type": "step",
+          "settings": {
+            "title": "Step 1",
+            "description": "Complete Certification Requirements",
+            "button_label": "Orientation Workshop Schedule",
+            "button_link": "#"
+          }
+        },
+        "step2": {
+          "type": "step",
+          "settings": {
+            "title": "Step 2",
+            "description": "Register for the Written Exam",
+            "button_label": "View Exam Dates",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": ["step1", "step2"],
+      "custom_css": []
+    },
+    "custom-faq": {
+      "type": "custom-faq",
+      "settings": {
+        "title": "Frequently Asked Questions"
+      },
+      "blocks": {
+        "faq_item_1": {
+          "type": "custom_faq_item",
+          "settings": {
+            "question": "What is your return policy?",
+            "answer": "<ul><li>You can return items within 30 days.</li><li>Items must be unused and in original packaging.</li></ul>"
+          }
+        },
+        "faq_item_2": {
+          "type": "custom_faq_item",
+          "settings": {
+            "question": "Do you offer international shipping?",
+            "answer": "<ul><li>Yes, we ship worldwide.</li><li>Shipping fees vary by location.</li></ul>"
+          }
+        }
+      },
+      "block_order": ["faq_item_1", "faq_item_2"]
+    },
+    "important-links": {
+      "type": "important-links",
+      "settings": {
+        "title": "Important Links"
+      },
+      "blocks": {
+        "link1": {
+          "type": "link_item",
+          "settings": {
+            "icon_svg": "<svg width=\"43\" height=\"43\" viewBox=\"0 0 43 43\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"43\" height=\"43\" rx=\"6\" fill=\"#DDF2FF\"/><path d=\"M23 31V33.5L20 31.5L17 33.5V31H16.5C14.567 31 13 29.433 13 27.5V15C13 13.3432 14.3432 12 16 12H30C30.5523 12 31 12.4477 31 13V30C31 30.5523 30.5523 31 30 31H23ZM17 29V27H23V29H29V26H16.5C15.6716 26 15 26.6716 15 27.5C15 28.3284 15.6716 29 16.5 29H17ZM17 15V17H19V15H17ZM17 18V20H19V18H17ZM17 21V23H19V21H17Z\" fill=\"#00436A\"/></svg>",
+            "link_text": "Georgia Court Reporting Act",
+            "link_url": "https://example.com"
+          }
+        },
+        "link2": {
+          "type": "link_item",
+          "settings": {
+            "icon_svg": "<svg width=\"43\" height=\"43\" viewBox=\"0 0 43 43\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"43\" height=\"43\" rx=\"6\" fill=\"#DDF2FF\"/><path d=\"M31 31H23V16C23 14.3432 24.3431 13 26 13H31C31.5523 13 32 13.4477 32 14V30C32 30.5523 31.5523 31 31 31ZM21 31H13C12.4477 31 12 30.5523 12 30V14C12 13.4477 12.4477 13 13 13H18C19.6568 13 21 14.3432 21 16V31ZM21 31H23V33H21V31Z\" fill=\"#00436A\"/></svg>",
+            "link_text": "Code of Professional Ethics",
+            "link_url": "https://example.com"
+          }
+        },
+        "link3": {
+          "type": "link_item",
+          "settings": {
+            "icon_svg": "<svg width=\"43\" height=\"43\" viewBox=\"0 0 43 43\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"43\" height=\"43\" rx=\"6\" fill=\"#DDF2FF\"/><path d=\"M31 19V30.9925C31 31.5511 30.5552 32 30.0066 32H13.9934C13.445 32 13 31.556 13 31.0082V12.9918C13 12.4553 13.4469 12 13.9983 12H24V18C24 18.5523 24.4477 19 25 19H31ZM31 17H26V12.0032L31 17ZM18 17V19H21V17H18ZM18 21V23H26V21H18ZM18 25V27H26V25H18Z\" fill=\"#00436A\"/></svg>",
+            "link_text": "Georgia Certified Court Reporters CE Pre...",
+            "link_url": "https://example.com"
+          }
+        },
+        "link4": {
+          "type": "link_item",
+          "settings": {
+            "icon_svg": "<svg width=\"43\" height=\"43\" viewBox=\"0 0 43 43\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"43\" height=\"43\" rx=\"6\" fill=\"#DDF2FF\"/><path d=\"M14 12H30C30.5523 12 31 12.4477 31 13V32.2763C31 32.5525 30.7761 32.7764 30.5 32.7764C30.4298 32.7764 30.3604 32.7615 30.2963 32.7329L22 29.0313L13.7037 32.7329C13.4516 32.8455 13.1559 32.7322 13.0434 32.4801C13.0148 32.4159 13 32.3465 13 32.2763V13C13 12.4477 13.4477 12 14 12ZM22 23.5L24.9389 25.0451L24.3776 21.7725L26.7553 19.4549L23.4695 18.9775L22 16L20.5305 18.9775L17.2447 19.4549L19.6224 21.7725L19.0611 25.0451L22 23.5Z\" fill=\"#00436A\"/></svg>",
+            "link_text": "Court Transcript Preparation Time Study",
+            "link_url": "https://example.com"
+          }
+        },
+        "link5": {
+          "type": "link_item",
+          "settings": {
+            "icon_svg": "<svg width=\"43\" height=\"43\" viewBox=\"0 0 43 43\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"43\" height=\"43\" rx=\"6\" fill=\"#DDF2FF\"/><path d=\"M29 31H13C12.4477 31 12 30.5523 12 30V12C12 11.4477 12.4477 11 13 11H29C29.5523 11 30 11.4477 30 12V30C30 30.5523 29.5523 31 29 31ZM16 15V19H20V15H16ZM16 21V23H26V21H16ZM16 25V27H26V25H16ZM22 16V18H26V16H22Z\" fill=\"#00436A\"/></svg>",
+            "link_text": "Appendix A",
+            "link_url": "https://example.com"
+          }
+        },
+        "link6": {
+          "type": "link_item",
+          "settings": {
+            "icon_svg": "<svg width=\"43\" height=\"43\" viewBox=\"0 0 43 43\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"43\" height=\"43\" rx=\"6\" fill=\"#DDF2FF\"/><path d=\"M29 31H15.5C13.567 31 12 29.433 12 27.5V14C12 12.3432 13.3432 11 15 11H29C29.5523 11 30 11.4477 30 12V30C30 30.5523 29.5523 31 29 31ZM28 29V26H15.5C14.6716 26 14 26.6716 14 27.5C14 28.3284 14.6716 29 15.5 29H28Z\" fill=\"#00436A\"/></svg>",
+            "link_text": "BCR Rules and Regulations",
+            "link_url": "https://example.com"
+          }
+        },
+        "link7": {
+          "type": "link_item",
+          "settings": {
+            "icon_svg": "<svg width=\"43\" height=\"43\" viewBox=\"0 0 43 43\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"43\" height=\"43\" rx=\"6\" fill=\"#DDF2FF\"/><path d=\"M31 19V30.9925C31 31.5511 30.5552 32 30.0066 32H13.9934C13.445 32 13 31.556 13 31.0082V12.9918C13 12.4553 13.4469 12 13.9983 12H24V18C24 18.5523 24.4477 19 25 19H31ZM31 17H26V12.0032L31 17ZM18 17V19H21V17H18ZM18 21V23H26V21H18ZM18 25V27H26V25H18Z\" fill=\"#00436A\"/></svg>",
+            "link_text": "Complaint Form",
+            "link_url": "https://example.com"
+          }
+        },
+        "link8": {
+          "type": "link_item",
+          "settings": {
+            "icon_svg": "<svg width=\"43\" height=\"43\" viewBox=\"0 0 43 43\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"43\" height=\"43\" rx=\"6\" fill=\"#DDF2FF\"/><path d=\"M22 27V29H26V31H16V29H20V27H11.9918C11.4441 27 11 26.5511 11 25.9925V13.0075C11 12.4511 11.4553 12 11.9918 12H30.0082C30.556 12 31 12.4489 31 13.0075V25.9925C31 26.5489 30.5447 27 30.0082 27H22Z\" fill=\"#00436A\"/></svg>",
+            "link_text": "GCR Training",
+            "link_url": "https://example.com"
+          }
+        },
+        "link9": {
+          "type": "link_item",
+          "settings": {
+            "icon_svg": "<svg width=\"43\" height=\"43\" viewBox=\"0 0 43 43\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"43\" height=\"43\" rx=\"6\" fill=\"#DDF2FF\"/><path d=\"M13 29C12.45 29 11.9793 28.8043 11.588 28.413C11.1967 28.0217 11.0007 27.5507 11 27V15C11 14.45 11.196 13.9793 11.588 13.588C11.98 13.1967 12.4507 13.0007 13 13H19L21 15H29C29.55 15 30.021 15.196 30.413 15.588C30.805 15.98 31.0007 16.4507 31 17V27C31 27.55 30.8043 28.021 30.413 28.413C30.0217 28.805 29.5507 29.0007 29 29H13Z\" fill=\"#00436A\"/></svg>",
+            "link_text": "Civil and Criminal Fee Schedule",
+            "link_url": "https://example.com"
+          }
+        }
+      },
+      "block_order": [
+        "link1",
+        "link2",
+        "link3",
+        "link4",
+        "link5",
+        "link6",
+        "link7",
+        "link8",
+        "link9"
+      ]
     }
   },
   "order": [
@@ -259,6 +421,11 @@
     "featured_blog_7RgD8j",
     "coustomize_LeDMEW",
     "1753179979808bfb7d",
-    "belt-banner-section"
+    "belt-banner-section",
+    "report_statment",
+    "board_contact",
+    "court_reporter_steps",
+    "custom-faq",
+    "important-links"
   ]
 }

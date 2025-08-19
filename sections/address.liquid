@@ -1,0 +1,70 @@
+{% schema %}
+{
+  "name": "Board Contact",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "The Board of Court Reporting"
+    },
+    {
+      "type": "textarea",
+      "id": "address",
+      "label": "Address",
+      "default": "Judicial Council/Administrative Office of the Courts\n244 Washington Street, SW – Suite 300\nAtlanta, GA 30334"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Main Phone",
+      "default": "(404) 463-3808"
+    },
+    {
+      "type": "text",
+      "id": "fax",
+      "label": "Fax",
+      "default": "(770) 357-9011"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email",
+      "default": "abc@gmail.com"
+    },
+    {
+      "type": "text",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Board Membership"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Board of Court Reporting Contact",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+
+<section class="board-contact">
+  <div class="page-width">
+    <h2>{{ section.settings.title }}</h2>
+    <p>{{ section.settings.address | newline_to_br }}</p>
+    <p>📞 Main: {{ section.settings.phone }}</p>
+    <p>📠 Fax: {{ section.settings.fax }}</p>
+    <p>📧 Email: <a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a></p>
+  <a href="{{ section.settings.button_link | default: '#' }}" class="contact-btn">
+  {{ section.settings.button_label }}
+</a>
+
+  </div>
+</section>

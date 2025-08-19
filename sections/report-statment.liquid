@@ -1,0 +1,80 @@
+{% schema %}
+{
+  "name": "Board of Court Reporting",
+  "tag": "section",
+  "class": "board-of-court-reporting",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "The Board of Court Reporting of the Judicial Council of Georgia"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph1",
+      "label": "Paragraph 1",
+      "default": "The Georgia General Assembly established the Board..."
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph2",
+      "label": "Paragraph 2",
+      "default": "The Judicial Council of Georgia appoints..."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "role_item",
+      "name": "Role",
+      "settings": [
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Role Text",
+          "default": "Example responsibility..."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Board of Court Reporting",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="page-width report"> 
+  <div class="board-of-court-reporting">
+    <h2>{{ section.settings.title }}</h2>
+    <p>{{ section.settings.paragraph1 }}</p>
+    <p>{{ section.settings.paragraph2 }}</p>
+
+    <h3>Roles and Responsibilities</h3>
+    <ul class="role-list">
+      <li class="role-item">
+        <div class="role-badge">1</div>
+        <div class="role-text">All submissions must be made by the 15th of every month.</div>
+      </li>
+      <li class="role-item">
+        <div class="role-badge">2</div>
+        <div class="role-text">Applicants must provide valid government-issued identification.</div>
+      </li>
+      <li class="role-item">
+        <div class="role-badge">3</div>
+        <div class="role-text">Only certified professionals are eligible to apply.</div>
+      </li>
+      <li class="role-item">
+        <div class="role-badge">4</div>
+        <div class="role-text">Reports must adhere to formatting guidelines.</div>
+      </li>
+      <li class="role-item">
+        <div class="role-badge">5</div>
+        <div class="role-text">Violations of code of conduct will result in disqualification.</div>
+      </li>
+    </ul>
+  </div>
+</div>
