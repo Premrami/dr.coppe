@@ -1,0 +1,173 @@
+{% comment %}
+  Step Slider Section
+  Usage: Include in your Shopify theme with {% section 'step-slider' %}
+  Description: A step slider with arrow navigation and dynamic progress bar
+{% endcomment %}
+
+
+<section class="step-slider" id="step-slider-{{ section.id }}">
+  <h2>{{ section.settings.heading }}</h2>
+  <div class="progress-container">
+    <div class="progress-line">
+      <div class="progress" id="progress"></div>
+    </div>
+    <button class="arrow left" id="arrowLeft" disabled><svg width="45" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="60" width="60" height="60" rx="30" transform="rotate(-90 0 60)" fill="#F38B44"/>
+<path d="M34.7201 41.2799L24.4403 31L34.7201 20.7201" stroke="white" stroke-width="3"/>
+</svg>
+</button>
+    <button class="arrow right" id="arrowRight"><svg width="45" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="61" height="61" rx="30.5" transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 61 61)" fill="#F38B44"/>
+<path d="M26.2799 41.2799L36.5597 31L26.2799 20.7201" stroke="white" stroke-width="3"/>
+</svg>
+</button>
+    <div class="steps-nav">
+      {% for i in (1..5) %}
+        <div class="step-nav-item {% if forloop.first %}active{% endif %}">{{ i }}</div>
+      {% endfor %}
+    </div>
+  </div>
+  {% for i in (1..5) %}
+    {% assign step_title_key = 'step_' | append: i | append: '_title' %}
+    {% assign step_desc_key = 'step_' | append: i | append: '_description' %}
+    <div class="step-content {% if forloop.first %}active{% endif %}">
+      <h3>{{ section.settings[step_title_key] }}</h3>
+      <p>{{ section.settings[step_desc_key] }}</p>
+    </div>
+  {% endfor %}
+</section>
+
+{%- javascript -%}
+  document.addEventListener('DOMContentLoaded', function () {
+    const navItems = document.querySelectorAll('.step-nav-item');
+    const contents = document.querySelectorAll('.step-content');
+    const arrowLeft = document.getElementById('arrowLeft');
+    const arrowRight = document.getElementById('arrowRight');
+    const progress = document.getElementById('progress');
+    let currentStep = 0;
+
+    function showStep(index) {
+      navItems.forEach((item, i) => {
+        item.classList.remove('active');
+        if (i < index) item.classList.add('completed');
+        else item.classList.remove('completed');
+      });
+      contents.forEach(c => c.classList.remove('active'));
+      navItems[index].classList.add('active');
+      contents[index].classList.add('active');
+      arrowLeft.disabled = index === 0;
+      arrowRight.disabled = index === navItems.length - 1;
+      updateProgress(index);
+    }
+
+    function updateProgress(index) {
+      const progressWidth = ((index + 1) / navItems.length) * 100;
+      progress.style.width = `${progressWidth}%`;
+    }
+
+    navItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        if (index <= currentStep + 1) { // Allow clicking completed or current step
+          currentStep = index;
+          showStep(currentStep);
+        }
+      });
+    });
+
+    arrowLeft.addEventListener('click', () => {
+      if (currentStep > 0) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    });
+
+    arrowRight.addEventListener('click', () => {
+      if (currentStep < navItems.length - 1) {
+        currentStep++;
+        showStep(currentStep);
+      }
+    });
+
+    showStep(currentStep);
+  });
+{%- endjavascript -%}
+
+{% schema %}
+{
+  "name": "Step Slider with Arrows",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Process"
+    },
+    {
+      "type": "text",
+      "id": "step_1_title",
+      "label": "Step 1 Title",
+      "default": "Initial Consultation"
+    },
+    {
+      "type": "textarea",
+      "id": "step_1_description",
+      "label": "Step 1 Description",
+      "default": "We discuss your needs and goals to tailor our approach."
+    },
+    {
+      "type": "text",
+      "id": "step_2_title",
+      "label": "Step 2 Title",
+      "default": "Planning"
+    },
+    {
+      "type": "textarea",
+      "id": "step_2_description",
+      "label": "Step 2 Description",
+      "default": "We create a detailed plan based on your requirements."
+    },
+    {
+      "type": "text",
+      "id": "step_3_title",
+      "label": "Step 3 Title",
+      "default": "Development"
+    },
+    {
+      "type": "textarea",
+      "id": "step_3_description",
+      "label": "Step 3 Description",
+      "default": "Our team builds the solution with precision and care."
+    },
+    {
+      "type": "text",
+      "id": "step_4_title",
+      "label": "Step 4 Title",
+      "default": "Review"
+    },
+    {
+      "type": "textarea",
+      "id": "step_4_description",
+      "label": "Step 4 Description",
+      "default": "We review the work with you for feedback and adjustments."
+    },
+    {
+      "type": "text",
+      "id": "step_5_title",
+      "label": "Step 5 Title",
+      "default": "Delivery"
+    },
+    {
+      "type": "textarea",
+      "id": "step_5_description",
+      "label": "Step 5 Description",
+      "default": "The final product is delivered to you with support."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Step Slider with Arrows",
+      "category": "Custom"
+    } 
+  ]
+}
+{% endschema %}

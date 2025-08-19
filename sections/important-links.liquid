@@ -1,0 +1,81 @@
+<section class="important-links-section">
+  <div class="important-links-container">
+    <h2 class="important-links-title">
+      {{ section.settings.title }}
+    </h2>
+
+    <div class="important-links-grid">
+      {% for block in section.blocks %}
+        <a 
+          href="{{ block.settings.link_url }}" 
+          class="important-links-item"
+          target="_blank"
+        >
+          <div class="important-links-left">
+            <!-- Icon -->
+            <div class="important-links-icon">
+
+              {{ block.settings.icon_svg }}
+            </div>
+            <span>{{ block.settings.link_text }}</span>
+          </div>
+
+          <!-- External link arrow -->
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 11L11 3M11 3H4M11 3V10" stroke="white" stroke-width="2"/>
+          </svg>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Important Links",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Important Links"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_item",
+      "name": "Link Item",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "icon_svg",
+          "label": "SVG Icon",
+          "default": "<svg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'><path d='M4 4h16v16H4z'/></svg>"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text",
+          "default": "Example Link"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Important Links",
+      "blocks": [
+        { "type": "link_item" },
+        { "type": "link_item" },
+        { "type": "link_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}
